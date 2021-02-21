@@ -72,6 +72,18 @@ function VictimSexChart(props) {
 
     let entries =
       Object.entries(obj).sort((a, b) => (a[0] > b[0] ? 1 : -1)) || [];
+
+      console.log(entries)
+
+      for (let i = 0; i < entries.length; i++) {
+        if (entries[i][0] === "F") {
+          entries[i][0] = "Female"
+        } else if (entries[i][0] === "M") {
+          entries[i][0] = "Male"
+        } else {
+          entries[i][0] = "Unknown"
+        }
+      }
      return (
         <Doughnut
           data={{
