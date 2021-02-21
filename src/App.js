@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <>
         <nav className="nav-wrapper">
-          <p className="text-center p-0 text-white" style={{fontWeight: 650}}>2020 NYC Shooting Incidents Dashboard</p> 
+          <p className="text-center p-0 text-white" style={{fontWeight: 620, fontSize: "16px"}}>2020 NYC Shooting Incidents Dashboard</p> 
         </nav>
 
       <div className="container-fluid"> 
@@ -68,9 +68,9 @@ class App extends Component {
 
         <div className="card horizontal">
         <div className="card-content">
-          <p>In 2020, NYC Shooting Incidents</p>
+          <p className="text-center">In 2020, Total NYC Shooting Incidents</p>
           <h1 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h1>
-          <p className="justify-content-end text-right">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
+          <p className="text-center">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
         </div>
         </div>
         <VictimSexChart results={this.state.sites}/> 
