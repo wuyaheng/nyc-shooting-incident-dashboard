@@ -69,7 +69,7 @@ class App extends Component {
         <div className="card horizontal">
         <div className="card-content">
           <p>Total Number of NYC Shooting Incidents in 2020</p>
-          <h1 className="text-center" style={{color: "#cc8b86"}}>{this.state.sites.length}</h1>
+          <h1 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h1>
           <p className="justify-content-end text-right">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
         </div>
         </div>
