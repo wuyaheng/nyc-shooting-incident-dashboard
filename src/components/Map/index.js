@@ -28,15 +28,6 @@ export default (props) => {
         }
       ).addTo(mymap);
 
-  //     const points = addressPoints
-  //     ? addressPoints.map((p) => {
-  //         return [p[0], p[1]];
-  //       })
-  //     : [];
-
-  //   L.heatLayer(points).addTo(map);
-  // }, []);
-
         const points = props.results.map((location) => {
           return [location.latitude, location.longitude]
         })
