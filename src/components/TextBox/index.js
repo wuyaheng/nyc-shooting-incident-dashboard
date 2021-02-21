@@ -14,7 +14,7 @@ function TextBox(props) {
 
       console.log(obj)
   return (
-        <div className="card">
+        <div className="card mb-1">
              <div className="card-content">
           <p className="text-center">Shooting Resulted in the Victim’s Death</p>
 

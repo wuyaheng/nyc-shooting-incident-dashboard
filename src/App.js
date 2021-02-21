@@ -66,7 +66,7 @@ class App extends Component {
         </div> 
       </div>  */}
 
-        <div className="card horizontal">
+        <div className="card mb-1">
         <div className="card-content">
           <p className="text-center">In 2020, Total NYC Shooting Incidents</p>
           <h4 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h4>
@@ -84,6 +84,7 @@ class App extends Component {
         </div>
 
           <div className="col-md-5 mb-0 pb-0">
+          <p className="text-center pb-0 mb-0" style={{fontSize: "1rem", fontWeight: "700", lineHeight: "1.5", color: "#686868"}}>Location Where the Shooting Incident Occurred</p>
               <div className="card mb-0 pb-0"> 
                 <Map results={this.state.sites}/> 
               </div>
