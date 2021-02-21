@@ -87,6 +87,7 @@ function VictimRaceChart(props) {
             ],
           }}
           options={options} 
+          height={"300px"}
         />
       );
 

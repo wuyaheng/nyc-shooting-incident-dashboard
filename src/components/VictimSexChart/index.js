@@ -96,6 +96,7 @@ function VictimSexChart(props) {
             ],
           }}
           options={options} 
+          height={"300px"}
         />
       );
 
