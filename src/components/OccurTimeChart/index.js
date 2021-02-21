@@ -1,7 +1,7 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
-import Moment from 'react-moment';
+import moment from 'moment';
 
 function OccurTimeChart(props) {
     console.log(props.results)
@@ -71,7 +71,7 @@ function OccurTimeChart(props) {
      return (
         <Line
           data={{
-            labels: entries.map((x) => x[0]),
+            labels: entries.map((x) => x[0].substring(0,5)),
             datasets: [
               {
                 data: entries.map((x) => x[1]), 

@@ -1,9 +1,23 @@
 import React from "react";
 import L from "leaflet";
 import "leaflet.heat";
-
+let counter = 0;
 export default (props) => {
+
+  const [currentCount, setCount] = React.useState(0);
+  const timer = () => setCount(currentCount + 1);
+
+  React.useEffect(
+      () => {
+          console.log(currentCount)
+          const id = setInterval(timer, 1000);
+          return () => clearInterval(id);
+      },
+      [currentCount]
+  )
+
   React.useEffect(() => {
+
     const MAP_CONTAINER = document.getElementById("map-container");
 
     if (props.lat && props.lon && props.pins) {
@@ -11,9 +25,7 @@ export default (props) => {
       MAP_ID.setAttribute("id", "mapid");
       MAP_CONTAINER.appendChild(MAP_ID);
 
-      let mymap; 
-      props.pins.length > 200 ? 
-      mymap = L.map("mapid").setView([props.lat, props.lon], 10) : mymap = L.map("mapid").setView([props.lat, props.lon], 15)
+      let mymap = L.map("mapid").setView([props.lat, props.lon], 11) 
 
       L.tileLayer(
         "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -28,12 +40,24 @@ export default (props) => {
         }
       ).addTo(mymap);
 
+  //     const points = addressPoints
+  //     ? addressPoints.map((p) => {
+  //         return [p[0], p[1]];
+  //       })
+  //     : [];
 
-      props.pins.forEach((pin) =>
-         L.marker([pin.latitude, pin.longitude]).addTo(mymap).bindTooltip('<b>Victim Age Group:</b> <span>' + pin.vic_age_group + '</span><br/><b>Victim Sex:</b> <span>' + pin.vic_sex + '</span><br/><b>Victim Race: </b><span>' + pin.vic_race + '</span><br/><b>Occur Date: </b><span>' + pin.occur_date + '</span>')  
-      );
+  //   L.heatLayer(points).addTo(map);
+  // }, []);
+
+        const points = props.pins.map((location) => {
+          return [location.latitude, location.longitude]
+        })
+
+
+        L.heatLayer(points).addTo(mymap);
 
     }
+    console.log(counter++)
 
     return () => (MAP_CONTAINER.innerHTML = "");
   }, [props.lat, props.lon, props.pins]);

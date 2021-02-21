@@ -79,7 +79,7 @@ class App extends Component {
     return (
       <>
         <nav className="nav-wrapper">
-          <p className="center projectTitle p-0 text-white">NYC Shooting Incident Dashboard</p> 
+          <p className="center projectTitle p-0 text-white">2020 NYC Shooting Incident Dashboard</p> 
         </nav>
 
       <div className="container-fluid"> 
@@ -108,7 +108,7 @@ class App extends Component {
           <h1 className="text-center" style={{color: "#cc8b86"}}>{this.state.sites.length}</h1>
         </div>
         </div>
-        <VictimSexChart results={this.state.sites}/> 
+        <OccurDateChart results={this.state.sites}/>
      
         </div> 
 
@@ -118,7 +118,7 @@ class App extends Component {
         </div>
         <div className="col-md-3">
           <OccurTimeChart results={this.state.sites}/>
-          <OccurDateChart results={this.state.sites}/>
+          <VictimSexChart results={this.state.sites}/> 
         </div>
           <div className="col-md-3 mb-0 pb-0">
               <div className="card mb-0 pb-0"> 
