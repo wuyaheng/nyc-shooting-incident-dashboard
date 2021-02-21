@@ -102,8 +102,14 @@ class App extends Component {
       <h6>&nbsp;<b>Choose a Borough</b></h6> 
         <SelectBoroughs results={this.state.boroughs} handleInputChange={this.handleInputChange} /> 
         </div> */}
+        <div className="card horizontal">
+        <div className="card-content">
+          <p>Total Number of NYC Shooting Incidents in 2020</p>
+          <h1 className="text-center">{this.state.sites.length}</h1>
+        </div>
+        </div>
         <VictimSexChart results={this.state.sites}/> 
-        <OccurDateChart results={this.state.sites}/>
+     
         </div> 
 
         <div className="col-md-3">
@@ -112,6 +118,7 @@ class App extends Component {
         </div>
         <div className="col-md-3">
           <OccurTimeChart results={this.state.sites}/>
+          <OccurDateChart results={this.state.sites}/>
         </div>
           <div className="col-md-3 mb-0 pb-0">
               <div className="card mb-0 pb-0"> 
