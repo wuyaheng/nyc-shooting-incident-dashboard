@@ -78,15 +78,15 @@ function VictimAgeChart(props) {
 
       console.log("before",entries)
       let last = entries.splice(4,1)
-      entries.unshift(last)
-    console.log("after",entries)
+      let unArray = last[0]
+      entries.unshift(unArray)
      return (
         <Bar
           data={{
-            labels: entries.map((x) => x[0]),
+            labels: entries.map((x) => x?.[0]),
             datasets: [
               {
-                data: entries.map((x) => x[1]), 
+                data: entries.map((x) => x?.[1]), 
                 backgroundColor: colorArray
               },
             ],
