@@ -8,12 +8,12 @@ export default (props) => {
 
     const MAP_CONTAINER = document.getElementById("map-container");
 
-    if (props.lat && props.lon && props.pins) {
+    if (props.results) {
       const MAP_ID = document.createElement("div");
       MAP_ID.setAttribute("id", "mapid");
       MAP_CONTAINER.appendChild(MAP_ID);
 
-      let mymap = L.map("mapid").setView([props.lat, props.lon], 11) 
+      let mymap = L.map("mapid").setView([40.746106816563156, -73.92531492341064], 11) 
 
       L.tileLayer(
         "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -37,7 +37,7 @@ export default (props) => {
   //   L.heatLayer(points).addTo(map);
   // }, []);
 
-        const points = props.pins.map((location) => {
+        const points = props.results.map((location) => {
           return [location.latitude, location.longitude]
         })
 
@@ -47,7 +47,7 @@ export default (props) => {
     }
 
     return () => (MAP_CONTAINER.innerHTML = "");
-  }, [props.lat, props.lon, props.pins]);
+  }, [props.results]);
 
   return <div id="map-container"></div>;
 };
