@@ -70,7 +70,7 @@ class App extends Component {
         <div className="card-content">
           <p className="text-center">In 2020, Total NYC Shooting Incidents</p>
           <h1 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h1>
-          <p className="text-center">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
+          <p className="text-center">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Year-To-Date-/5ucz-vwe8">NYC OpenData  </a></p>
         </div>
         </div>
         <VictimSexChart results={this.state.sites}/> 
