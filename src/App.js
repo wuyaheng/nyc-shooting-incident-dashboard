@@ -105,7 +105,7 @@ class App extends Component {
         <div className="card horizontal">
         <div className="card-content">
           <p>Total Number of NYC Shooting Incidents in 2020</p>
-          <h1 className="text-center">{this.state.sites.length}</h1>
+          <h1 className="text-center" style={{color: "#cc8b86"}}>{this.state.sites.length}</h1>
         </div>
         </div>
         <VictimSexChart results={this.state.sites}/> 
