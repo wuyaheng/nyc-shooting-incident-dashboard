@@ -72,19 +72,17 @@ class App extends Component {
           <h1 className="text-center" style={{color: "#cc8b86"}}>{this.state.sites.length}</h1>
         </div>
         </div>
-        <OccurDateChart results={this.state.sites}/>
-     
+        <VictimSexChart results={this.state.sites}/> 
+
         </div> 
 
         <div className="col-md-3">
         <VictimAgeChart results={this.state.sites}/> 
+
         <VictimRaceChart results={this.state.sites}/> 
         </div>
-        <div className="col-md-3">
-          <OccurTimeChart results={this.state.sites}/>
-          <VictimSexChart results={this.state.sites}/> 
-        </div>
-          <div className="col-md-3 mb-0 pb-0">
+
+          <div className="col-md-6 mb-0 pb-0">
               <div className="card mb-0 pb-0"> 
                 <MapBox results={this.state.sites}/> 
               </div>
@@ -92,6 +90,17 @@ class App extends Component {
               <p className="mr-1 justify-content-end text-right">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn">NYC OpenData  </a></p>
            
             </div> 
+        </div>
+
+        <div className="row">
+        <div className="col-md-12">
+        <OccurDateChart results={this.state.sites}/>
+        </div>
+        </div>
+        <div className="row">
+        <div className="col-md-12">
+          <OccurTimeChart results={this.state.sites}/>
+        </div>
         </div>
        </div> 
       </>
