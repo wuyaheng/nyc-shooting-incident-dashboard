@@ -3,7 +3,6 @@ import { Doughnut } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
 
 function VictimSexChart(props) {
-    console.log(props.results)
 
   const DoughnutChart = ({ type }) => {
     const obj = {};
@@ -73,8 +72,6 @@ function VictimSexChart(props) {
     let entries =
       Object.entries(obj).sort((a, b) => (a[0] > b[0] ? 1 : -1)) || [];
 
-      console.log(entries)
-
       for (let i = 0; i < entries.length; i++) {
         if (entries[i][0] === "F") {
           entries[i][0] = "Female"
@@ -96,7 +93,7 @@ function VictimSexChart(props) {
             ],
           }}
           options={options} 
-          height={"300px"}
+          height={300}
         />
       );
 

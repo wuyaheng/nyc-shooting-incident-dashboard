@@ -33,7 +33,7 @@ export default (props) => {
         })
 
 
-        L.heatLayer(points, {radius: 35, blur: 10}).addTo(mymap);
+        L.heatLayer(points, {radius: 34, blur: 8}).addTo(mymap);
 
     }
 

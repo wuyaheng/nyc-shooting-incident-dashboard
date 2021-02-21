@@ -3,7 +3,6 @@ import { Bar } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
 
 function VictimAgeChart(props) {
-    console.log(props.results)
 
   const BarChart = ({ type }) => {
     const obj = {};
@@ -76,7 +75,6 @@ function VictimAgeChart(props) {
     let entries =
       Object.entries(obj).sort((a, b) => (a[0] > b[0] ? 1 : -1)) || [];
 
-      console.log("before",entries)
       let last = entries.splice(4,1)
       let unArray = last[0]
       entries.unshift(unArray)
@@ -92,7 +90,7 @@ function VictimAgeChart(props) {
             ],
           }}
           options={options} 
-          height={"300px"}
+          height={300}
         />
       );
 

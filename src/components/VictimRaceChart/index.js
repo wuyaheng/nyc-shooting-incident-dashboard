@@ -3,7 +3,6 @@ import { Radar } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
 
 function VictimRaceChart(props) {
-    console.log(props.results)
 
   const RadarChart = ({ type }) => {
     const obj = {};
@@ -87,7 +86,7 @@ function VictimRaceChart(props) {
             ],
           }}
           options={options} 
-          height={"300px"}
+          height={300}
         />
       );
 

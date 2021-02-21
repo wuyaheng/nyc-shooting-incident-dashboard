@@ -4,7 +4,6 @@ import 'chartjs-plugin-labels';
 import moment from 'moment';
 
 function OccurDateChart(props) {
-    console.log(props.results)
 
   const LineChart = ({ type }) => {
     const obj = {};
@@ -80,7 +79,7 @@ function OccurDateChart(props) {
             ],
           }}
           options={options} 
-          height={"300px"}
+          height={300}
         />
       );
 

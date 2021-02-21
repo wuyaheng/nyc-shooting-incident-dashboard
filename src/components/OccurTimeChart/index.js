@@ -3,7 +3,6 @@ import { Line } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
 
 function OccurTimeChart(props) {
-    console.log(props.results)
 
   const LineChart = ({ type }) => {
     const obj = {};
@@ -79,7 +78,7 @@ function OccurTimeChart(props) {
             ],
           }}
           options={options} 
-          height={"300px"}
+          height={300}
         />
       );
 

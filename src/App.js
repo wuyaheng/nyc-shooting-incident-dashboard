@@ -5,6 +5,7 @@ import VictimAgeChart from "./components/VictimAgeChart/index";
 import VictimRaceChart from "./components/VictimRaceChart/index";
 import OccurDateChart from "./components/OccurDateChart/index";
 import OccurTimeChart from "./components/OccurTimeChart/index"; 
+import TextBox from "./components/TextBox/index";
 import './App.css';
 import axios from "axios"
 
@@ -43,7 +44,6 @@ class App extends Component {
 
 
   render() {
-
     return (
       <>
         <nav className="nav-wrapper">
@@ -69,10 +69,10 @@ class App extends Component {
         <div className="card horizontal">
         <div className="card-content">
           <p className="text-center">In 2020, Total NYC Shooting Incidents</p>
-          <h1 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h1>
-          <p className="text-center">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Year-To-Date-/5ucz-vwe8">NYC OpenData  </a></p>
+          <h4 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h4>
         </div>
         </div>
+        <TextBox results={this.state.sites}/>
         <VictimSexChart results={this.state.sites}/> 
 
         </div> 
@@ -101,6 +101,7 @@ class App extends Component {
           <OccurTimeChart results={this.state.sites}/>
         </div>
         </div>
+        <p className="text-center">Data Source: <a target="_blank" rel="noopener noreferrer" aria-label="NYC open data" href="https://data.cityofnewyork.us/Public-Safety/NYPD-Shooting-Incident-Data-Year-To-Date-/5ucz-vwe8">NYC OpenData  </a></p>
        </div> 
       </>
     )
