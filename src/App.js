@@ -4,6 +4,7 @@ import SelectBoroughs from "./components/SelectBoroughs/index";
 import VictimSexChart from "./components/VictimSexChart/index";
 import VictimAgeChart from "./components/VictimAgeChart/index";
 import VictimRaceChart from "./components/VictimRaceChart/index";
+import OccurDateChart from "./components/OccurDateChart/index";
 import './App.css';
 import axios from "axios"
 
@@ -83,7 +84,7 @@ class App extends Component {
       <div className="container-fluid"> 
       <div className="row mt-2 mb-0"> 
       <div className="col-md-3">
-
+{/* 
       <a className="aboutBtn mt-2 waves-effect waves-light btn btn-block modal-trigger #3f88c5 text-white" href="#modal1">About the Project</a>
 
       <div id="modal1" className="modal">
@@ -94,13 +95,14 @@ class App extends Component {
           <a href="#!" className="aboutCloseBtn modal-close waves-effect waves-green btn text-white #3f88c5">Close</a>
         </div>
         </div> 
-      </div> 
+      </div>  */}
 
-      <div className="searchCard"> 
+      {/* <div className="searchCard"> 
       <h6>&nbsp;<b>Choose a Borough</b></h6> 
         <SelectBoroughs results={this.state.boroughs} handleInputChange={this.handleInputChange} /> 
-        </div>
+        </div> */}
         <VictimSexChart results={this.state.sites}/> 
+        <OccurDateChart results={this.state.sites}/>
         </div> 
 
         <div className="col-md-3">
