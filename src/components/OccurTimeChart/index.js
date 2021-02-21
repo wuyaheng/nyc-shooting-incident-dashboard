@@ -30,7 +30,7 @@ function OccurTimeChart(props) {
       },
       title: {
         display: true,
-        text: 'Shooting Incident Occurred Time', 
+        text: 'Shooting Incidents Occurred Time', 
         fontSize: 15
      },
       scales: {
