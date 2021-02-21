@@ -30,7 +30,7 @@ class App extends Component {
         }
       }
     }
-    const res = await axios.get('https://data.cityofnewyork.us/resource/5ucz-vwe8.json',options)
+    const res = await axios.get('https://data.cityofnewyork.us/resource/5ucz-vwe8.json?$limit=50000',options)
 
     this.setState({
       sites: res.data
