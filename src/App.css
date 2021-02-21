@@ -13,8 +13,9 @@ p {
   height: 20% !important;
 }
 
-.navbar-light,.navbar-light {
+.nav-wrapper {
   margin: 0 auto !important;
+  background-color: #7f7f7f !important;
 }
 
 nav {

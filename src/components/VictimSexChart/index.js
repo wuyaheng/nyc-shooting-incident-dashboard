@@ -9,8 +9,8 @@ function VictimSexChart(props) {
     const obj = {};
     const colorArray = [
         "#cc8b86",
-        "#a0ced9",
-        "#f5cb5c"
+        "#9eb3c2",
+        "#fedc97"
       ];
 
     let options = {

@@ -8,13 +8,13 @@ function VictimRaceChart(props) {
   const RadarChart = ({ type }) => {
     const obj = {};
     const colorArray = [
-        "#cc8b86",
-        "#a0ced9",
-        "#f5cb5c",
-        "#99c2a2",
-        "#b392ac",
-        "#7f7f7f"
-      ];
+      "#9eb3c2",
+      "#cdd7d6",
+      "#cc8b86",
+      "#afcad0",
+      "#b392ac",
+      "#7f7f7f"
+    ];
 
     let options = {
       legend: {

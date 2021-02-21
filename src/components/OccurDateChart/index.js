@@ -75,7 +75,7 @@ function OccurDateChart(props) {
             datasets: [
               {
                 data: entries.map((x) => x[1]), 
-                backgroundColor: "#a0ced9"
+                backgroundColor: "#9eb3c2"
               },
             ],
           }}

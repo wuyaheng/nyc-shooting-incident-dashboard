@@ -8,10 +8,10 @@ function VictimAgeChart(props) {
   const BarChart = ({ type }) => {
     const obj = {};
     const colorArray = [
+        "#9eb3c2",
+        "#cdd7d6",
         "#cc8b86",
-        "#a0ced9",
-        "#f5cb5c",
-        "#99c2a2",
+        "#afcad0",
         "#b392ac",
         "#7f7f7f"
       ];
