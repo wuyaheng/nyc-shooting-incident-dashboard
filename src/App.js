@@ -5,6 +5,7 @@ import VictimSexChart from "./components/VictimSexChart/index";
 import VictimAgeChart from "./components/VictimAgeChart/index";
 import VictimRaceChart from "./components/VictimRaceChart/index";
 import OccurDateChart from "./components/OccurDateChart/index";
+import OccurTimeChart from "./components/OccurTimeChart/index"; 
 import './App.css';
 import axios from "axios"
 
@@ -109,7 +110,10 @@ class App extends Component {
         <VictimAgeChart results={this.state.sites}/> 
         <VictimRaceChart results={this.state.sites}/> 
         </div>
-          <div className="col-md-6 mb-0 pb-0">
+        <div className="col-md-3">
+          <OccurTimeChart results={this.state.sites}/>
+        </div>
+          <div className="col-md-3 mb-0 pb-0">
               <div className="card mb-0 pb-0"> 
                 <MapBox results={this.state.sites}/> 
               </div>

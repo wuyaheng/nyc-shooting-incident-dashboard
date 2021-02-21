@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import 'chartjs-plugin-labels';
 import Moment from 'react-moment';
 
-function OccurDateChart(props) {
+function OccurTimeChart(props) {
     console.log(props.results)
 
   const LineChart = ({ type }) => {
@@ -31,7 +31,7 @@ function OccurDateChart(props) {
       },
       title: {
         display: true,
-        text: 'Shooting Incident Occurred Date', 
+        text: 'Shooting Incident Occurred Time', 
         fontSize: 15
      },
       scales: {
@@ -89,9 +89,9 @@ function OccurDateChart(props) {
 
   return (
         <div>
-          <LineChart type="occur_date"/>
+          <LineChart type="occur_time"/>
         </div>
   );
 }
 
-export default OccurDateChart;
+export default OccurTimeChart;

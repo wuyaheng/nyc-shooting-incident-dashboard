@@ -1,5 +1,6 @@
 import React from "react";
 import L from "leaflet";
+import "leaflet.heat";
 
 export default (props) => {
   React.useEffect(() => {
