@@ -75,6 +75,11 @@ function VictimAgeChart(props) {
 
     let entries =
       Object.entries(obj).sort((a, b) => (a[0] > b[0] ? 1 : -1)) || [];
+
+      console.log("before",entries)
+      let last = entries.splice(4,1)
+      entries.unshift(last)
+    console.log("after",entries)
      return (
         <Bar
           data={{

@@ -1,20 +1,8 @@
 import React from "react";
 import L from "leaflet";
 import "leaflet.heat";
-let counter = 0;
+
 export default (props) => {
-
-  const [currentCount, setCount] = React.useState(0);
-  const timer = () => setCount(currentCount + 1);
-
-  React.useEffect(
-      () => {
-          console.log(currentCount)
-          const id = setInterval(timer, 1000);
-          return () => clearInterval(id);
-      },
-      [currentCount]
-  )
 
   React.useEffect(() => {
 
@@ -57,7 +45,6 @@ export default (props) => {
         L.heatLayer(points).addTo(mymap);
 
     }
-    console.log(counter++)
 
     return () => (MAP_CONTAINER.innerHTML = "");
   }, [props.lat, props.lon, props.pins]);

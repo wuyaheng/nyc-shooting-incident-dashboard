@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MapBox from "./components/MapBox/index"
-import SelectBoroughs from "./components/SelectBoroughs/index"; 
 import VictimSexChart from "./components/VictimSexChart/index";
 import VictimAgeChart from "./components/VictimAgeChart/index";
 import VictimRaceChart from "./components/VictimRaceChart/index";
@@ -14,39 +13,17 @@ const ALLBOROUGHS = "All Boroughs"
 
 class App extends Component { 
   state = {
-    boroughs: [],
-    sel_borough: "",
     sites: []
   }
 
   componentDidMount() {
-    this.setState(
-      {
-        sel_borough: ALLBOROUGHS,
-      },
-        this.fetchSites
-     );
-    this.fetchBoroughs();
+      this.fetchSites()
   } 
 
-  fetchBoroughs = async () => {
-    try {
-      const res = await axios.get(
-        'https://data.cityofnewyork.us/resource/5ucz-vwe8.json?$group=boro&$select=boro'
-      );
-      let dropdownBorough = res.data.map((x) => x.boro)
-      let dropdown = [ALLBOROUGHS,...dropdownBorough] 
-      this.setState({
-        boroughs: dropdown
-      });
-    } catch (error) {
-      console.log(error)
-    }
-  } 
 
   fetchSites = async () => { 
     let options = {}
-    if (this.state.sel_borough !== ALLBOROUGHS) {
+    if (this.state.sel_borough !== ALLBOROUGHS) { 
       options = { 
         params: {
           boro: this.state.sel_borough 
@@ -61,15 +38,6 @@ class App extends Component {
   }
 
 
-  handleInputChange = (event) => {
-    this.setState(
-      {
-        sel_borough: event.target.value 
-      },
-      () => {
-        this.fetchSites()
-      })
-  }
 
 
 
@@ -98,10 +66,6 @@ class App extends Component {
         </div> 
       </div>  */}
 
-      {/* <div className="searchCard"> 
-      <h6>&nbsp;<b>Choose a Borough</b></h6> 
-        <SelectBoroughs results={this.state.boroughs} handleInputChange={this.handleInputChange} /> 
-        </div> */}
         <div className="card horizontal">
         <div className="card-content">
           <p>Total Number of NYC Shooting Incidents in 2020</p>
