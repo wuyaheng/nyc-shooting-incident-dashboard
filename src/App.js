@@ -67,7 +67,7 @@ class App extends Component {
       </div>  */}
 
         <div className="card mb-1">
-        <div className="card-content">
+        <div className="card-content pb-1">
           <p className="text-center">In 2020, Total NYC Shooting Incidents</p>
           <h4 className="text-center" style={{color: "#cc8b86", fontWeight: 700}}>{this.state.sites.length}</h4>
         </div>
